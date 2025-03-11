@@ -1,11 +1,10 @@
+import 'package:e_commerce/presentaion/Home.dart';
+import 'package:e_commerce/presentaion/Sign_in.dart';
+import 'package:e_commerce/presentaion/Sign_up.dart';
+import 'package:e_commerce/presentaion/home_pages/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-// import 'Sales_App/Home_Screan.dart';
-// import 'Session_3_task/Session_3_task.dart';
-// import 'BMI_Calculator/Calculation_Page.dart';
-import 'Sign_up.dart';
-import 'Sign_in.dart';
-import 'Home.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SignIn(),
+      home: SignUp(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:e_commerce/data/api_manger/api_manger.dart';
 import 'package:flutter/material.dart';
 
 import 'Sign_in.dart';
@@ -5,7 +6,7 @@ import 'Sign_in.dart';
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
@@ -31,6 +32,7 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               TextFormField(
+
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.mail_outline,color: Colors.white,),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
@@ -42,6 +44,7 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               TextFormField(
+
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock_outline,color: Colors.white,),
                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
