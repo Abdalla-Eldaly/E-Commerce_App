@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../model/Product_response.dart';
+import '../model/Register_response.dart';
 
 class ApiManger {
   Dio dio = Dio(
@@ -48,5 +49,28 @@ class ApiManger {
     }
   }
 
+  Future<RegisterResponse?>register({
+    required String name,
+    required String email,
+    required String password,
+})async{
+    
+   try{
+     final response =await dio.post('users/',
+         data: {
+           "name": name,
+           "email": email,
+           "password": password,
+           "avatar": "https://picsum.photos/800"
+         }
+     );
 
+     return RegisterResponse.fromJson(response.data);
+   }
+   catch(e){
+     print(e.toString());
+     return null;
+   }
+
+  }
 }
